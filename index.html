@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
     <!-- gallery -->
     <link
       href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
@@ -19,44 +19,62 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <!--   Logo  -->
-        <div class="header__logo-wrapper">
-          <img src="" alt="logo" loading="lazy" class="header__logo logo" />
+      <div class="container-nav">
+        <div class="header__wrapper">
+          <!--   Logo  -->
+          <div class="header__logo-wrapper">
+            <img src="./img/logo.png" alt="logo" loading="lazy" class="header__logo logo" />
+          </div>
+          <!--   Menu Button  -->
+          <button aria-expanded="false" data-menu-button class="menu-button">
+            <svg width="40" height="40" aria-label="Премкачь мобильного меню">
+              <use class="icon-cross" href="./img/svg/sprite.svg#icon-cross"></use>
+              <use class="icon-menu" href="./img/svg/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
         </div>
-        <!--   Menu Button  -->
-        <button aria-expanded="false" data-menu-button class="header__menu-button menu-button">
-          <svg width="40" height="40" aria-label="Премкачь мобильного меню">
-            <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
-            <use class="con-menu" href="./img/sprite.svg#icon-menu"></use>
-          </svg>
-        </button>
         <!--   Navigation  -->
-        <div class="backdrop">
+        <div class="backdrop" data-menu>
           <nav class="main-nav">
             <ul class="main-nav__list">
-              <li class="main-nav__item">Головна</li>
-              <li class="main-nav__item">Знижки та акції</li>
-              <li class="main-nav__item">Галерея</li>
-              <li class="main-nav__item">Каталог</li>
-              <li class="main-nav__item">Як замовити</li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Головна</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Знижки та акції</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Галерея</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Каталог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Як замовити</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
+
     <main>
       <!-- Section Hero  -->
       <section class="hero">
         <div class="container">
-          <img src="" alt="logo-big" loading="lazy" class="logo-big" />
-          <h1 class="title">Ваш комфорт - наша спеціалізація</h1>
-          <h2 class="second-title">
-            Відкривай нову сторінку активного життя разом зі спортивними костюмами BRIDA. У нашому
-            каталозі представлені трендові моделі 2020.
-          </h2>
+          <div class="hero__wrapper">
+            <img src="./img/big-logo.png" alt="logo-big" loading="lazy" class="logo-big" />
+
+            <h1 class="title hero__title">Ваш комфорт - наша спеціалізація</h1>
+            <h2 class="second-title hero__second-title">
+              Відкривай нову сторінку активного життя разом зі спортивними костюмами BRIDA. У нашому
+              каталозі представлені трендові моделі 2020.
+            </h2>
+          </div>
         </div>
+        <div class="hero__gradient"></div>
       </section>
+
       <!-- Section Hero End  -->
 
       <!-- Block Line -->
@@ -71,47 +89,62 @@
       <section class="sale">
         <div class="container">
           <div class="sale-wrapper">
-            <h2 class="second-title second-title--red">Знижка 30% на ВСЕ!</h2>
-            <h3 class="sub-title">Знижка 30% діє на всі спортивні костюми на сайті.*</h3>
-            <p class="text">* термін дії знижки з 01.05.2020 по 15.05.2020 включно;</p>
-            <p class="text">
+            <h2 class="second-title sale__title--red">Знижка 30% на ВСЕ!</h2>
+            <h3 class="sub-title sale__sub-title">
+              Знижка 30% діє на всі спортивні костюми на сайті.*
+            </h3>
+            <p class="text sale__text">* термін дії знижки з 01.05.2020 по 15.05.2020 включно;</p>
+            <p class="text sale__text">
               ** повідомте оператору код-слово "ЛІТО" та отримайте знижку 50% на другий костюм у
               чеку.
             </p>
           </div>
         </div>
+        <div class="sale__gradient"></div>
       </section>
       <!-- Sale End-->
 
       <!--Your Stily -->
-      <section class="your-stile">
+      <section class="your-style">
         <div class="container">
-          <h2 class="second-title">Оберіть свій стиль</h2>
-          <h3 class="sub-title">Оригінальний оверсайз або ж спортивна класика?</h3>
-          <div class="card-stile">
-            <img src="" alt="product-one" loading="lazy" class="card-stile__product" />
-            <div class="card-stile__info">
-              <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
-              <p class="text">
+          <h2 class="second-title your-style__second-title">Оберіть свій стиль</h2>
+          <h3 class="sub-title your-style__sub-title">
+            Оригінальний оверсайз або ж спортивна класика?
+          </h3>
+          <div class="card-style">
+            <img
+              src="./img/costume/costume-black.jpg"
+              alt="product-one"
+              loading="lazy"
+              class="card-style__product"
+            />
+            <div class="card-style__info">
+              <h3 class="sub-title card__sub-title">Спортивный костюм OVERSIZE</h3>
+              <p class="text card__text">
                 Спортивный костюм из натурального коттона в оригинальном фасоне становится настоящим
                 хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и разработали
                 спортивный костюм гармонирующей игрой оверсайз худи и джоггеров свободного кроя.
                 Оригинальный компромисс, на который пошла мода традиционная со спортивной модой.
               </p>
-              <a href="#" class="card-stile__btn">Перейти до каталогу</a>
+              <a href="#" class="card-style__btn">Перейти до каталогу</a>
             </div>
           </div>
-          <div class="card-stile">
-            <img src="" alt="product-two" loading="lazy" class="card-stile__product" />
-            <div class="card-stile__info">
-              <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
-              <p class="text">
-                Спортивный костюм из натурального коттона в оригинальном фасоне становится настоящим
-                хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и разработали
-                спортивный костюм гармонирующей игрой оверсайз худи и джоггеров свободного кроя.
-                Оригинальный компромисс, на который пошла мода традиционная со спортивной модой.
+          <div class="card-style">
+            <img
+              src="./img/costume/costume-silver.jpg"
+              alt="product-two"
+              loading="lazy"
+              class="card-style__product"
+            />
+            <div class="card-style__info">
+              <h3 class="sub-title card__sub-title">Спортивный костюм CLASSIC</h3>
+              <p class="text card__text">
+                Прикоснитесь к миру высокой спортивной моды вместе с BRIDA. Лёгкий и эластичный
+                спортивный костюм имеет эргономичный дизайн, поэтому двигаться в нем одно
+                удовольствие. Джоггеры достаточно свободные, а худи – сидит по фигуре. Такой
+                ансамбль будет очень удобным, а натуральным материалам не страшна любая непогода.
               </p>
-              <a href="#" class="card-stile__btn">Перейти до каталогу</a>
+              <a href="#" class="card-style__btn">Перейти до каталогу</a>
             </div>
           </div>
         </div>
@@ -121,18 +154,19 @@
       <!-- Benefits -->
       <section class="benefits">
         <div class="container">
-          <h2>Чому варто зупинити вибір на BRIDA?</h2>
+          <h2 class="second-title benefits__second-title">Чому варто зупинити вибір на BRIDA?</h2>
           <div class="benefits-wrapper">
             <!-- Card one -->
             <div class="card-benefits">
               <div class="card-benefits__info">
-                <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
+                <h3 class="sub-title card-benefits__sub-title">
+                  СУЧАСНІ <br />
+                  КАНОНИ МОДИ
+                </h3>
                 <p class="text">
-                  Спортивный костюм из натурального коттона в оригинальном фасоне становится
-                  настоящим хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и
-                  разработали спортивный костюм гармонирующей игрой оверсайз худи и джоггеров
-                  свободного кроя. Оригинальный компромисс, на который пошла мода традиционная со
-                  спортивной модой.
+                  Велику увагу приділено дрібним деталям: кишеням, манжетам, ремінцям. Ідеально
+                  рівні шви та лінії в тандемі з різноманітними колірними рішеннями дали змогу
+                  надати жіночим моделям граціозності.
                 </p>
               </div>
               <img src="" alt="product-two" loading="lazy" class="card-benefits__product" />
@@ -140,13 +174,13 @@
             <!-- Card two -->
             <div class="card-benefits">
               <div class="card-benefits__info">
-                <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
+                <h3 class="sub-title card-benefits__sub-title">
+                  РІЗНОМАСНІСТЬ <br />
+                  ЖІНОЧОГО ОБРАЗУ
+                </h3>
                 <p class="text">
-                  Спортивный костюм из натурального коттона в оригинальном фасоне становится
-                  настоящим хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и
-                  разработали спортивный костюм гармонирующей игрой оверсайз худи и джоггеров
-                  свободного кроя. Оригинальный компромисс, на который пошла мода традиционная со
-                  спортивной модой.
+                  Усі представлені моделі жіночих спортивних костюмів відносяться не тільки до
+                  повсякденного одягу, а належать до ніші одягу для спорту.
                 </p>
               </div>
               <img src="" alt="product-two" loading="lazy" class="card-benefits__product" />
@@ -154,13 +188,14 @@
             <!-- Card thre -->
             <div class="card-benefits">
               <div class="card-benefits__info">
-                <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
+                <h3 class="sub-title card-benefits__sub-title">
+                  ВЕСНА/ЛІТО: <br />
+                  У БУДЬ-ЯКУ ПОГОДУ
+                </h3>
                 <p class="text">
-                  Спортивный костюм из натурального коттона в оригинальном фасоне становится
-                  настоящим хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и
-                  разработали спортивный костюм гармонирующей игрой оверсайз худи и джоггеров
-                  свободного кроя. Оригинальный компромисс, на который пошла мода традиционная со
-                  спортивной модой.
+                  Нова колекція костюмів BRIDA з натуральних дихаючих матеріалів виконана в головних
+                  трендових кольорах 2020 року. Представлені з натуральної бавовни, яка ідеально
+                  підходить для одягу і в теплий сезон.
                 </p>
               </div>
               <img src="" alt="product-two" loading="lazy" class="card-benefits__product" />
@@ -168,13 +203,13 @@
             <!-- Card for -->
             <div class="card-benefits">
               <div class="card-benefits__info">
-                <h3 class="sub-title">Спортивный костюм OVERSIZE</h3>
+                <h3 class="sub-title card-benefits__sub-title">
+                  З ТУРБОТОЮ <br />
+                  ПРО КОМФОРТ
+                </h3>
                 <p class="text">
-                  Спортивный костюм из натурального коттона в оригинальном фасоне становится
-                  настоящим хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и
-                  разработали спортивный костюм гармонирующей игрой оверсайз худи и джоггеров
-                  свободного кроя. Оригинальный компромисс, на который пошла мода традиционная со
-                  спортивной модой.
+                  Звісно, дизайнери так само подбали і про стильні фасони для Вас, а виробники
+                  успішно поєднали зручність із красою костюмів.
                 </p>
               </div>
               <img src="" alt="product-two" loading="lazy" class="card-benefits__product" />
@@ -188,8 +223,8 @@
         <div class="container">
           <h2 class="second-title">Спортивний одяг BRIDA - це:</h2>
           <ul class="about-product__list">
-            <li class="about-product__item">
-              <h3 class="sub-title">БРЕНДОВІ КОСТЮМИ</h3>
+            <li class="about-product__item">index.html
+              <h3 class="sub-title ">БРЕНДОВІ КОСТЮМИ</h3>
               <p class="text">
                 Ми підібрали для Вас найвдаліші моделі, що увібрали в себе найкращі характеристики
                 спортивного одягу та сучасного дизайну.
@@ -375,5 +410,6 @@
     <!-- gallery -->
     <script src=" https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js "></script>
     <!-- gallery end-->
+    <script src="./js/menu.js"></script>
   </body>
 </html>
