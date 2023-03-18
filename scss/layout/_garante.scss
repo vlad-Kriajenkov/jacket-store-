@@ -1,0 +1,45 @@
+.garante {
+  background-color: #eeeeee;
+  padding: 30px 0;
+  &__second-title {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    width: 35px;
+    margin-right: 16px;
+  }
+
+  &__sub-title {
+    font-weight: 500;
+  }
+
+  &__text {
+  }
+}
+.gardient-item__wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container {
+}
+.second-title {
+}
+.sub-title {
+}
+.text {
+}
