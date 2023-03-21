@@ -6,47 +6,67 @@
     padding: 0 22px;
     margin-bottom: 30px;
     text-align: center;
+    @media screen and (min-width: 1196px) {
+      font-size: 40px;
+    }
   }
 
   &__sub-title {
     padding: 0 22px;
-	margin-bottom: 50px;
+    margin-bottom: 50px;
     text-align: center;
-	
   }
 }
 .card-style {
-	img{
-		max-width: 100%;
-		width: 460px;
-		height: auto;
-		margin-bottom: 20px;
-	}
+  @media screen and (min-width: 1196px) {
+    & {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+    &--row {
+      flex-direction: row-reverse;
+    }
+  }
+  img {
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1196px) {
+      & {
+        width: 460px;
+      }
+    }
+  }
   &__product {
   }
 
   &__info {
+    @media screen and (min-width: 1196px) {
+      padding: 30px;
+    }
   }
 
   &__btn {
-	display:inline-block;
-	text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
 
-	color: #ffffff;
-	background-color: #000000;
-	border-radius: 6px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 6px;
 
-	padding: 20px 26px;
-	margin-bottom: 40px;
+    padding: 20px 26px;
+    margin-bottom: 40px;
   }
 }
 .card {
   &__sub-title {
-	font-weight: 500;
-	margin-bottom: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
   }
 
   &__text {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }

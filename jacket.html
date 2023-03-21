@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jacket</title>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+</head>
+<body>
+<header class="header">
+      <div class="container-nav">
+        <div class="header__wrapper">
+          <!--   Logo  -->
+          <div class="header__logo-wrapper">
+            <img src="./img/logo.png" alt="logo" loading="lazy" class="header__logo logo" />
+          </div>
+          <!--   Menu Button  -->
+          <button aria-expanded="false" data-menu-button class="menu-button">
+            <svg width="40" height="40" aria-label="Премкачь мобильного меню">
+              <use class="icon-cross" href="./img/svg/sprite.svg#icon-cross"></use>
+              <use class="icon-menu" href="./img/svg/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <!--   Navigation  -->
+        <div class="backdrop" data-menu>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Головна</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Знижки та акції</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Галерея</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Каталог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="text-nav main-nav__link">Як замовити</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="jacket-main">
+        <section class="product">
+            <div class="container">
+                <div class="product__container">
+                    <div class="card-product">
+                        <div class="card-product__wrpa-photo">
+                            <img class="card-product__photo" src="./img/product/jacket/black/20230304_103344.jpg" alt="">
+                            <div class="card-product__sale">SALE -30%</div>
+                        </div>
+                        <div class="card-product__wrpa-info">
+                            <h2 class="second-title card-product__second-title">Спортивный костюм BRIDA "Pink Flower"</h2>
+                            <div class="card-price">
+                                <div class="card-price__new">990 грн</div>
+                                <div class="card-price__old">1415 грн</div>
+                            </div>
+                            <button class="card-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <center>
+          <p style="color: white">
+            ТОВ "ShokSale" проспект Дмитра Яворницького, 50, Дніпро, 49000 ЄДРПОУ 39729741
+          </p>
+          <a style="color: white" href="tel:+380633200000">+380 63 320-00-00</a>
+          <a style="color: white" href="mailto:goodproducts@gmail.com">goodproducts@gmail.com</a>
+          <div>
+            <a style="color: white" href="https://policy.deliverygoooods.com/ua/" target="_blank"
+              >Політика конфіденційності</a
+            >
+            <a
+              style="color: white"
+              href="https://policy.deliverygoooods.com/ua/agreement.html"
+              target="_blank"
+              >Умови повернення</a
+            >
+            <a
+              style="color: white"
+              href="https://policy.deliverygoooods.com/ua/return.html"
+              target="_blank"
+              >Політика обміну та повернення</a
+            >
+          </div>
+        </center>
+      </div>
+    </footer>
+
+    <!-- Footer End-->
+    <script src="./js/menu.js" type="module"></script>
+</body>
+</html>

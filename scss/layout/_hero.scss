@@ -21,9 +21,17 @@
   }
   &__title {
     margin-bottom: 24px;
+    @media screen and (min-width:768px) {
+      font-size: 68px;
+    }
   }
+ 
   &__second-title{
     font-size: 14px;
+    @media screen and (min-width:768px) {
+      font-size: 22px;
+      font-weight: 300;
+    }
   }
 }
 .hero__gradient {

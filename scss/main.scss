@@ -2,13 +2,19 @@
 @import './base/containers';
 @import './base/text';
 
+@import './components/header';
 @import './components/line';
 @import './components/gallery';
+@import './components/footer';
 
-@import './layout/header';
+@import './components/card-product';
+
 @import './layout/hero';
 @import './layout/sale';
 @import './layout/yourStyle';
 @import './layout/benefits';
 @import './layout/about-product';
-@import './layout/garante'
+@import './layout/garante';
+@import './layout/oreder-info';
+
+@import './layout/product';
