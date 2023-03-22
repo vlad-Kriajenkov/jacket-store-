@@ -255,6 +255,76 @@ body {
   padding: 15px 0;
 }
 
+.bg-modal {
+  position: absolute;
+  z-index: 100001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.modal {
+  padding: 20px;
+}
+
+.modal-gallery {
+  max-width: 460px;
+  margin-bottom: 15px;
+}
+.modal-info__second-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.modal-info__text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.modal-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.modal-price__new {
+  margin-right: 10px;
+}
+.modal-price__old {
+  text-decoration: line-through;
+  color: #d0d0d0;
+}
+
+.modal-form__labe {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.modal-form__select {
+  margin-bottom: 15px;
+}
+.modal-form__input {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 15px;
+}
+.modal-form__btn {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 6px;
+  border: none;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.modal-form__text-info {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
