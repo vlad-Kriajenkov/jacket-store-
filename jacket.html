@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jacket</title>
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-</head>
-<body>
-<header class="header">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/> 
+  </head>
+  <body>
+    <header class="header">
       <div class="container-nav">
         <div class="header__wrapper">
           <!--   Logo  -->
@@ -53,29 +62,14 @@
     </header>
 
     <main class="jacket-main">
-        <section class="product">
-            <div class="container">
-                <div class="product__container">
-                    <div class="card-product">
-                        <div class="card-product__wrpa-photo">
-                            <img class="card-product__photo" src="./img/product/jacket/black/20230304_103344.jpg" alt="">
-                            <div class="card-product__sale">SALE -30%</div>
-                        </div>
-                        <div class="card-product__wrpa-info">
-                            <h2 class="second-title card-product__second-title">Спортивный костюм BRIDA "Pink Flower"</h2>
-                            <div class="card-price">
-                                <div class="card-price__new">990 грн</div>
-                                <div class="card-price__old">1415 грн</div>
-                            </div>
-                            <button class="card-btn">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section class="product">
+        <div class="container">
+          <div class="product__container"></div>
+        </div>
+      </section>
     </main>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <center>
@@ -106,6 +100,28 @@
     </footer>
 
     <!-- Footer End-->
+
+    <div class="bg-modal">
+      <div class="modal">
+        <div class="modal-gallery"></div>
+        <div class="modal-info"></div>
+      </div>
+    </div>
+
+   
+
     <script src="./js/menu.js" type="module"></script>
-</body>
+    <script src="./js/product-jacket.js" type="module"></script>
+    <script src="./js/form.js" type="module"></script>
+    <script src="./js/renderGallery.js" type="module"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  
+  </body>
 </html>
