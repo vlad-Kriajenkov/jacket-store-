@@ -1,9 +1,25 @@
 .jacket-main {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 .product {
-    padding: 100px 0;
+  padding: 100px 0;
+}
+.product__container {
 
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  @media screen and (min-width: 1196px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
 }
 .container {
 }

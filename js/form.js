@@ -1,14 +1,33 @@
-import { productItems } from './product-jacket-items.js';
+import { jacketArr, giletArr, giletLongArr, tracksuitArr } from './product-jacket-items.js';
 
+const category = localStorage.getItem('category');
 const galleryContainer = document.querySelector('.product__container');
 const modalInfoContainer = document.querySelector('.modal-info');
 
+let json = [] ?? productItems;
+switch (category) {
+  case 'jacket':
+    json = jacketArr;
+    break;
+  case 'gilet':
+    json = giletArr;
+    break;
+  case 'giletLong':
+    json = giletLongArr;
+    break;
+  case 'tracksuit':
+    json = tracksuitArr;
+    break;
+  default:
+    json = jacketArr;
+    break;
+}
 
 galleryContainer.addEventListener('click', listnerClickOfProductCart);
 
 function listnerClickOfProductCart(e) {
   const keyProductCard = e.target.dataset.key;
-  const newproductItems = productItems.map(({ountification, preview, description, name }) =>{
+  const newproductItems = json.map(({ountification, preview, description, name }) =>{
         if (keyProductCard === ountification) {
             return `
                 <h2 class="second-title modal-info__second-title">${name}</h2>

@@ -1,16 +1,34 @@
-import { productItems } from './product-jacket-items.js'; 
+import { jacketArr, giletArr, giletLongArr, tracksuitArr } from './product-jacket-items.js';
 
-console.log(productItems);
-
+const category = localStorage.getItem('category');
 const galleryContainer = document.querySelector('.product__container');
-const cardsMarkup = ceateImgCardsMarkup(productItems);
+
+let json = [] ?? productItems;
+switch (category) {
+  case 'jacket':
+    json = jacketArr;
+    break;
+  case 'gilet':
+    json = giletArr;
+    break;
+  case 'giletLong':
+    json = giletLongArr;
+    break;
+  case 'tracksuit':
+    json = tracksuitArr;
+    break;
+  default:
+    json = jacketArr;
+    break;
+}
+
+const cardsMarkup = ceateImgCardsMarkup(json);
 
 galleryContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 
 function ceateImgCardsMarkup(productItems) {
-   
-  return productItems
-    .map(({  ountification, preview, description, name }) => {
+  return json
+    .map(({ ountification, preview, description, name }) => {
       return `
         <div class="card-product">
             <div class="card-product__wrpa-photo">
@@ -29,9 +47,6 @@ function ceateImgCardsMarkup(productItems) {
         `;
     })
     .join('');
-
-
 }
 
-
-
+// localStorage.clear();

@@ -1,10 +1,19 @@
 .card-product {
   background-color: #ffffff;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: 1196px) {
+    width: calc((100% - 90px) / 3);
+  }
+
   &__wrpa-photo {
     position: relative;
   }
 
   &__photo {
+
   }
 
   &__sale {
@@ -40,6 +49,9 @@
   display: flex;
   font-size: 12px;
   margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
   &__new {
     margin-right: 10px;
   }
