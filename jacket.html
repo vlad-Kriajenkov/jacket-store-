@@ -16,17 +16,80 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-  
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/> 
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+
+    <script>
+      var url = new URL(window.location.href);
+      var pixel = url.searchParams.get('pixel');
+      var tiktok = url.searchParams.get('tiktok');
+      var gtmId = url.searchParams.get('gtm');
+
+      if (pixel) {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', pixel);
+        fbq('track', 'PageView');
+      }
+      if (tiktok) {
+        (function () {
+          var ta = document.createElement('script');
+          ta.type = 'text/javascript';
+          ta.async = true;
+          ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=' + tiktok;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ta, s);
+        })();
+      }
+      if (gtmId) {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js',
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', gtmId);
+      }
+    </script>
   </head>
-  <body>
+  <body class="bodyPageProductCart">
     <header class="header">
       <div class="container-nav">
         <div class="header__wrapper">
           <!--   Logo  -->
           <div class="header__logo-wrapper">
-            <img src="./img/logo.png" alt="logo" loading="lazy" class="header__logo logo" />
+            <a href="index.html">
+              <img src="./img/logo.png" alt="logo" loading="lazy" class="header__logo logo"
+            /></a>
           </div>
           <!--   Menu Button  -->
           <button aria-expanded="false" data-menu-button class="menu-button">
@@ -43,18 +106,6 @@
               <li class="main-nav__item">
                 <a href="index.html" class="text-nav main-nav__link">Головна</a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="text-nav main-nav__link">Знижки та акції</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="text-nav main-nav__link">Галерея</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="text-nav main-nav__link">Каталог</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="text-nav main-nav__link">Як замовити</a>
-              </li>
             </ul>
           </nav>
         </div>
@@ -68,6 +119,16 @@
         </div>
       </section>
     </main>
+
+    <div class="bg-modal">
+      <div class="modal">
+        <div class="modal-gallery"></div>
+        <div class="modal-info"></div>
+      </div>
+      <button class="modal-btn">
+        <img class="modal-btn__img" data-closeModal src="./img/svg/menu.svg" alt="" />
+      </button>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -101,15 +162,6 @@
 
     <!-- Footer End-->
 
-    <div class="bg-modal">
-      <div class="modal">
-        <div class="modal-gallery"></div>
-        <div class="modal-info"></div>
-      </div>
-    </div>
-
-   
-
     <script src="./js/menu.js" type="module"></script>
     <script src="./js/product-jacket.js" type="module"></script>
     <script src="./js/form.js" type="module"></script>
@@ -120,8 +172,13 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-  
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
+    ></script>
+
+    <script src="api.js"></script>
+    <script async defer src="https://mtrkt.com/tracker/analytics.js"></script>
   </body>
 </html>
