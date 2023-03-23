@@ -19,10 +19,15 @@
   }
 
   &__item {
-    width: calc((100% - 20px) / 2);
-    display: inline-flex;
-    align-items: flex-start;
+    display: inline;
     margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 20px) / 2);
+      display: inline-flex;
+      align-items: flex-start;
+    }
+   
+   
   }
   &__done {
     width: 30px;
