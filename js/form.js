@@ -3,7 +3,10 @@ import { jacketArr, giletArr, giletLongArr, tracksuitArr } from './product-jacke
 const category = localStorage.getItem('category');
 const galleryContainer = document.querySelector('.product__container');
 const modalInfoContainer = document.querySelector('.modal-info');
-
+const modalAllContainer = document.querySelector('.bg-modal');
+const bodyEl = document.querySelector('body');
+const btnCloseModal = document.querySelector('[data-closeModal]')
+ 
 let json = [] ?? productItems;
 switch (category) {
   case 'jacket':
@@ -24,12 +27,20 @@ switch (category) {
 }
 
 galleryContainer.addEventListener('click', listnerClickOfProductCart);
+btnCloseModal.addEventListener('click', onCloseModal)
+function listnerClickOfProductCart(e) { 
+  if (e.target.className !== 'card-btn') {
+    return;
+  }
 
-function listnerClickOfProductCart(e) {
-  const keyProductCard = e.target.dataset.key;
-  const newproductItems = json.map(({ountification, preview, description, name }) =>{
-        if (keyProductCard === ountification) {
-            return `
+  modalAllContainer.style.transform = 'translateY(0%)';
+  bodyEl.classList.add('modal-open')
+
+  const keyProductCard = e.target.dataset.key; 
+  const newproductItems = json
+    .map(({ ountification, preview, description, name }) => {
+      if (keyProductCard === ountification) {
+        return `
                 <h2 class="second-title modal-info__second-title">${name}</h2>
         <p class="text modal-info__text">82% хлопка 18% эластан</p>
         <div class="modal-price">
@@ -75,9 +86,15 @@ function listnerClickOfProductCart(e) {
           эластан. Это позволяет ткани оставаться максимально натуральной, быть стойкой к
           деформациям и хорошо тянуться.
         </p>
-        `
-        }
-  }).join('');
-  modalInfoContainer.insertAdjacentHTML('beforebegin', newproductItems)
+        `;
+      }
+    })
+    .join('');
+  modalInfoContainer.innerHTML = newproductItems;
+}
 
+function onCloseModal(e) {
+  modalAllContainer.style.transform = 'translateY(-100%)';
+  bodyEl.classList.remove('modal-open')
+  modalInfoContainer.innerHTML = '';
 }

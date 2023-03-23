@@ -14,8 +14,8 @@ function ceateImgCardsMarkup(galleryItems) {
       <div class="gallery__item">
         <a class="gallery__link" href="${original}">
           <img
-            class="gallery__image"
-            src="${original}"
+            class="gallery__image lazyload"
+            data-src="${original}"
             alt="${description}"
           />
         </a>

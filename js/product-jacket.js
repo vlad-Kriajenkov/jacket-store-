@@ -13,7 +13,7 @@ switch (category) {
     break;
   case 'giletLong':
     json = giletLongArr;
-    break;
+    break; 
   case 'tracksuit':
     json = tracksuitArr;
     break;

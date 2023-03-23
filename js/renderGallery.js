@@ -3,6 +3,7 @@ import { jacketArr, giletArr, giletLongArr, tracksuitArr } from './product-jacke
 const galleryContainer = document.querySelector('.product__container');
 const modalGalleryContainer = document.querySelector('.modal-gallery');
 const category = localStorage.getItem('category');
+const btnCloseModal = document.querySelector('[data-closeModal]');
 
 let json = [] ?? productItems;
 
@@ -25,8 +26,12 @@ switch (category) {
 }
 
 galleryContainer.addEventListener('click', listnerClickOfProductCart);
+btnCloseModal.addEventListener('click', onCloseModal);
 
 function listnerClickOfProductCart(e) {
+  if (e.target.className !== 'card-btn') {
+    return;
+  }
   const keyProductCard = e.target.dataset.key;
   const newproductItems = json.filter(el => {
     if (keyProductCard === el.ountification) {
@@ -55,4 +60,11 @@ function listnerClickOfProductCart(e) {
       adaptiveHeight: true,
     });
   });
+}
+
+function onCloseModal(e) {
+  modalGalleryContainer.classList.remove('slick-initialized');
+  modalGalleryContainer.classList.remove('slick-slider');
+  modalGalleryContainer.classList.remove('slick-dotted');
+  modalGalleryContainer.innerHTML = '';
 }
