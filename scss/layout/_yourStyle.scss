@@ -24,7 +24,7 @@
       align-items: center;
       margin-bottom: 70px;
     }
-    &--row {
+    &:nth-child(2n) {
       flex-direction: row-reverse;
     }
   }
