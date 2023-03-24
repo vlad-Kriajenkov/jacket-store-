@@ -20,6 +20,17 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
     <!-- gallery end -->
   </head>
   <body>
+    <script>
+      function dtime_nums(d) {
+        let now = new Date();
+        now.setDate(now.getDate() + d);
+        let mm = now.getMonth() + 1;
+        let day = now.getDate();
+        if (now.getDate() < 10) day = '0' + now.getDate();
+        if (mm < 10) mm = '0' + mm;
+        document.write(day + '.' + mm + '.' + now.getFullYear());
+      }
+    </script>
     <header class="header">
       <div class="container-nav">
         <div class="header__wrapper">
@@ -69,8 +80,8 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
 
             <h1 class="title hero__title">Ваш комфорт - наша спеціалізація</h1>
             <h2 class="second-title hero__second-title">
-              Відкривай нову сторінку активного життя разом зі спортивними костюмами BRIDA. У нашому
-              каталозі представлені трендові моделі 2020.
+              Відкривай нову сторінку стильного життя разом з трендовим верхнім одягом БРЕНД. У
+              нашому каталозі представлені трендові моделі 2023.
             </h2>
           </div>
         </div>
@@ -92,13 +103,17 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
         <div class="container">
           <div class="sale-wrapper">
             <h2 class="second-title sale__title--red">Знижка 30% на ВСЕ!</h2>
-            <h3 class="sub-title sale__sub-title">
-              Знижка 30% діє на всі спортивні костюми на сайті.*
-            </h3>
-            <p class="text sale__text">* термін дії знижки з 01.05.2020 по 15.05.2020 включно;</p>
+            <h3 class="sub-title sale__sub-title">Знижка 30% діє на весь асортімент на сайті.*</h3>
             <p class="text sale__text">
-              ** повідомте оператору код-слово "ЛІТО" та отримайте знижку 50% на другий костюм у
-              чеку.
+              * термін дії знижки з
+              <script>
+                dtime_nums(-6);
+              </script>
+              по
+              <script>
+                dtime_nums(0);
+              </script>
+              включно;
             </p>
           </div>
         </div>
@@ -110,9 +125,7 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
       <section class="your-style" id="catalog">
         <div class="container">
           <h2 class="second-title your-style__second-title">Оберіть свій стиль</h2>
-          <h3 class="sub-title your-style__sub-title">
-            Оригінальний оверсайз або ж спортивна класика?
-          </h3>
+          <h3 class="sub-title your-style__sub-title">Оригінальність, що поєднується з класикою</h3>
           <div class="card-style">
             <img
               data-src="./img/your-stile/jacket.jpg "
@@ -120,12 +133,12 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
               class="card-style__product lazyload"
             />
             <div class="card-style__info">
-              <h3 class="sub-title card__sub-title">Курточка</h3>
+              <h3 class="sub-title card__sub-title">Куртка</h3>
               <p class="text card__text">
-                Спортивный костюм из натурального коттона в оригинальном фасоне становится настоящим
-                хитом грядущего сезона. Дизайнеры данной модели ушли от обыденности и разработали
-                спортивный костюм гармонирующей игрой оверсайз худи и джоггеров свободного кроя.
-                Оригинальный компромисс, на который пошла мода традиционная со спортивной модой.
+                Демісезонна стьобана куртка оригінального фасону стане справжнім хітом сезону.
+                Дизайн моделі віддалений від буденності, разом з тим, він гармонійно поєднується з
+                оверсайз худі та вільного крою джогерами. Оригінальний компроміс традиційної моди і
+                спортивного стилю.
               </p>
               <a href="jacket.html" id="category-btn" data-category="jacket" class="card-style__btn"
                 >Перейти до каталогу</a
@@ -141,10 +154,9 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <div class="card-style__info">
               <h3 class="sub-title card__sub-title">Безрукавка</h3>
               <p class="text card__text">
-                Прикоснитесь к миру высокой спортивной моды вместе с BRIDA. Лёгкий и эластичный
-                спортивный костюм имеет эргономичный дизайн, поэтому двигаться в нем одно
-                удовольствие. Джоггеры достаточно свободные, а худи – сидит по фигуре. Такой
-                ансамбль будет очень удобным, а натуральным материалам не страшна любая непогода.
+                Легка трендова безрукавка – вишуканий стиль і ергономічність, які наповнюють кожен
+                рух впевненістю і легкістю. Зручний фасон, який легко поєднувати з класичним
+                вбранням і зручними спортивними образами.
               </p>
               <a href="jacket.html" id="category-btn" data-category="gilet" class="card-style__btn"
                 >Перейти до каталогу</a
@@ -160,16 +172,15 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <div class="card-style__info">
               <h3 class="sub-title card__sub-title">Довга Безрукавка</h3>
               <p class="text card__text">
-                Прикоснитесь к миру высокой спортивной моды вместе с BRIDA. Лёгкий и эластичный
-                спортивный костюм имеет эргономичный дизайн, поэтому двигаться в нем одно
-                удовольствие. Джоггеры достаточно свободные, а худи – сидит по фигуре. Такой
-                ансамбль будет очень удобным, а натуральным материалам не страшна любая непогода.
+                Безрукавка подовженого крою з поясом оригінального фасону стане справжнім хітом
+                сезону. Модель оригінально доповнює образи різних стилів, створюючи елегантні
+                офісні, вишукані вечірніи та сміливі повсякденні луки.
               </p>
               <a
                 href="jacket.html"
                 id="category-btn"
                 data-category="giletLong"
-                class="card-style__btn "
+                class="card-style__btn"
                 >Перейти до каталогу</a
               >
             </div>
@@ -181,12 +192,12 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
               class="card-style__product lazyload"
             />
             <div class="card-style__info">
-              <h3 class="sub-title card__sub-title">Спортивный костюм</h3>
+              <h3 class="sub-title card__sub-title">Спортивний костюм</h3>
               <p class="text card__text">
-                Прикоснитесь к миру высокой спортивной моды вместе с BRIDA. Лёгкий и эластичный
-                спортивный костюм имеет эргономичный дизайн, поэтому двигаться в нем одно
-                удовольствие. Джоггеры достаточно свободные, а худи – сидит по фигуре. Такой
-                ансамбль будет очень удобным, а натуральным материалам не страшна любая непогода.
+                Доторкніться до світу високої спортивної моди разом із BRIDA. Легкий та еластичний
+                спортивний костюм має ергономічний дизайн, тому рухатися в ньому одне задоволення.
+                Джогери досить вільні, а худі - сидить по фігурі. Такий ансамбль буде дуже зручним,
+                а натуральним матеріалам не страшна будь-яка негода.
               </p>
               <a
                 href="jacket.html"
@@ -229,12 +240,13 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <div class="card-benefits">
               <div class="card-benefits__info">
                 <h3 class="sub-title card-benefits__sub-title">
-                  РІЗНОМАСНІСТЬ <br />
+                  РІЗНОМАНІТНІСТЬ
+                  <br />
                   ЖІНОЧОГО ОБРАЗУ
                 </h3>
                 <p class="text">
-                  Усі представлені моделі жіночих спортивних костюмів відносяться не тільки до
-                  повсякденного одягу, а належать до ніші одягу для спорту.
+                  Усі представлені моделі верхнього одягу вдало поєднуються як з класичним, так і зі
+                  спортивним одягом.
                 </p>
               </div>
               <img
@@ -246,14 +258,11 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <!-- Card thre -->
             <div class="card-benefits">
               <div class="card-benefits__info">
-                <h3 class="sub-title card-benefits__sub-title">
-                  ВЕСНА/ЛІТО: <br />
-                  У БУДЬ-ЯКУ ПОГОДУ
-                </h3>
+                <h3 class="sub-title card-benefits__sub-title">У БУДЬ-ЯКУ ПОГОДУ</h3>
                 <p class="text">
-                  Нова колекція костюмів BRIDA з натуральних дихаючих матеріалів виконана в головних
-                  трендових кольорах 2020 року. Представлені з натуральної бавовни, яка ідеально
-                  підходить для одягу і в теплий сезон.
+                  Нова колекція BRIDA виконана в головних трендових кольорах 2023 року. Представлені
+                  моделі з екологічних і практичних матеріалів ідеально підходять для весни та
+                  осені.
                 </p>
               </div>
               <img
@@ -271,7 +280,7 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
                 </h3>
                 <p class="text">
                   Звісно, дизайнери так само подбали і про стильні фасони для Вас, а виробники
-                  успішно поєднали зручність із красою костюмів.
+                  успішно поєднали зручність і практичність.
                 </p>
               </div>
               <img
@@ -287,15 +296,15 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
       <!-- About Product -->
       <section class="about-product">
         <div class="container about-product__container">
-          <h2 class="second-title about-product__second-title">Спортивний одяг BRIDA - це:</h2>
+          <h2 class="second-title about-product__second-title">Одяг BRIDA - це:</h2>
           <ul class="about-product__list">
             <li class="about-product__item">
               <img data-src="./img/svg/done.svg" alt="done" class="about-product__done lazyload" />
               <div>
-                <h3 class="sub-title about-product__sub-title">БРЕНДОВІ КОСТЮМИ</h3>
+                <h3 class="sub-title about-product__sub-title">ТРЕНДОВІ МОДЕЛІ</h3>
                 <p class="text">
                   Ми підібрали для Вас найвдаліші моделі, що увібрали в себе найкращі характеристики
-                  спортивного одягу та сучасного дизайну.
+                  повсякденного одягу та сучасного дизайну.
                 </p>
               </div>
             </li>
@@ -314,7 +323,7 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
               <div>
                 <h3 class="sub-title about-product__sub-title">ПРЕМІАЛЬНИЙ КОМФОРТ</h3>
                 <p class="text">
-                  При виробництві представлених моделей, підвищену увагу було приділено пошиттю з
+                  При виробництві представлених моделей підвищену увагу було приділено пошиттю з
                   урахуванням особливостей жіночої фігури.
                 </p>
               </div>
@@ -322,7 +331,7 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <li class="about-product__item">
               <img data-src="./img/svg/done.svg" alt="done" class="about-product__done lazyload" />
               <div>
-                <h3 class="sub-title about-product__sub-title">ЯКІСНЕ ОБСЛУГОВУВАННЯ</h3>
+                <h3 class="sub-title about-product__sub-title">ПЕРШОКЛАСНЕ ОБСЛУГОВУВАННЯ</h3>
                 <p class="text">
                   Купуючи у нас, Ви можете бути на 100% впевнені в тому, що вчасно отримаєте
                   потрібний товар у належній якості.
@@ -332,10 +341,10 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
             <li class="about-product__item">
               <img data-src="./img/svg/done.svg" alt="done" class="about-product__done lazyload" />
               <div>
-                <h3 class="sub-title about-product__sub-title">НАТУРАЛЬНІ МАТЕРІАЛИ</h3>
+                <h3 class="sub-title about-product__sub-title">ЯКІСНІ МАТЕРІАЛИ</h3>
                 <p class="text">
-                  За коттоновими виробами легко доглядати, вони приємні до тіла, вирізняються
-                  високою гігроскопічністю та повітропроникністю.
+                  За виробами легко доглядати, вони приємні до тіла, вирізняються високою
+                  гігроскопічністю та повітропроникністю.
                 </p>
               </div>
             </li>
@@ -360,8 +369,8 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
                 <h2 class="sub-title garante__sub-title">ВИСОКА ЯКІСТЬ</h2>
               </div>
               <p class="text garante__text">
-                Кожна модель виконана з натуральної бавовни, тому костюми вирізняються високою
-                легкістю, м'якістю і гіпоалергенністю.
+                Кожна модель виконана з високоякісних матеріалів з використанням преміальної
+                фурнітури, тому вироби вирізняються легкістю, м'якістю і гіпоалергенністю.
               </p>
             </li>
             <li class="garante__item">
@@ -371,7 +380,7 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
               </div>
               <p class="text garante__text">
                 Пряме постачання від виробників і відсутність магазинних накруток дозволили нам
-                отримати спортивні костюми за доступною ціною.
+                отримати одяг за доступною ціною.
               </p>
             </li>
             <li class="garante__item">
@@ -441,10 +450,9 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
                   alt="кошик"
                   class="order-info__icon lazyload"
                 />
-                <h3 class="sub-title order-info__sub-title">Виберіть костюм</h3>
+                <h3 class="sub-title order-info__sub-title">Виберіть модель</h3>
                 <p class="text order-info__text">
-                  Виберіть стиль і перейдіть до каталогу, підберіть колір, розмір і додайте до
-                  кошика.
+                  Оберіть модель, підберіть колір, розмір, і додайте до кошика.
                 </p>
               </li>
               <li class="order-info__item">
